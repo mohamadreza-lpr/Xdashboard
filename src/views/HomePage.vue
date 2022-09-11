@@ -21,6 +21,9 @@
                <x-card>
                     <h1>Hello</h1>
                </x-card>
+               <x-button>
+
+               </x-button>
           </div>
      </div>
 </template>
