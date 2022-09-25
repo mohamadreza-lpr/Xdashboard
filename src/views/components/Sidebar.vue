@@ -20,7 +20,7 @@
                          </router-link>
                     </b-nav-item>
                     <b-nav-item active class="d-flex felx-column align-items-center">
-                         <router-link id="link" class="text-light" to="/">
+                         <router-link id="link" class="text-light" to="/charts">
                               <b-icon class="mr-4" style="width: 20px; height: 20px" icon="clipboard-data" variant="light" animation="fade"></b-icon>
                               <span class="ml-4 mb-1">Charts Page</span>
                          </router-link>

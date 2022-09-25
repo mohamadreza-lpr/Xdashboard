@@ -1,39 +1,56 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import HomePage from '../views/HomePage.vue'
-import About from '../views/About.vue'
-import Charts from '../views/Charts.vue'
+import Vue from "vue";
+import VueRouter from "vue-router";
+import HomePage from "../views/HomePage.vue";
+import About from "../views/About.vue";
+import Charts from "../views/Charts.vue";
+import Login from "../views/Login.vue";
+import DashboardLayout from "../layout/DashboardLayout.vue";
+import AuthLayout from "../layout/AuthLayout.vue";
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
-const routes = [
-  {
-    path: '/',
-    name: 'home page',
-    component: HomePage
-  },
-  {
-    path: '/about',
-    name: 'about',
-    component: About
-  },
-  {
-    path: '/charts',
-    name: 'chart page',
-    component: Charts
-  },
-  // {
-  //   path: '/about',
-  //   name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    // component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
-  // }
-]
+let authpages = {
+    path: "/",
+    redirect:"/login",
+    component: AuthLayout,
+    name: "Authentication",
+    children: [
+        {
+            path: "/login",
+            name: "Login",
+            component: Login,
+        },
+    ],
+};
+
+let dashboardPages = {
+    path: "/",
+    component: DashboardLayout,
+    redirect: "/",
+    name: "Dashboard layout",
+    children: [
+        {
+            path: "/",
+            name: "Home page",
+            component: HomePage,
+        },
+        {
+            path: "/about",
+            name: "About",
+            component: About,
+        },
+        {
+            path: "/charts",
+            name: "Chart page",
+            component: Charts,
+        },
+    ],
+};
+
+const routes = [dashboardPages, authpages];
 
 const router = new VueRouter({
-  routes
-})
+    routes,
+});
 
-export default router
+export default router;
