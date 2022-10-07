@@ -1,16 +1,14 @@
 <template>
-    <div class="container-fluid" id="app">
+    <div class="container-fluid">
+        <div class="row rounded">
+            <header-section></header-section>
+        </div>
         <div class="row">
-            <nav class="col-md-3 border">
-                <sidebar-section />
-            </nav>
-            <div class="col-md-9">
-                <div class="row">
-                    <header-section />
-                </div>
-                <div class="row">
-                    <router-view />
-                </div>
+            <div class="col-md-2">
+                <sidebar-section></sidebar-section>
+            </div>
+            <div class="col-md-10">
+                <router-view/>
             </div>
         </div>
     </div>
@@ -18,7 +16,7 @@
 
 <script>
 import HeaderSection from "../views/components/Header.vue";
-import SidebarSection from "../views/components/Sidebar.vue";
+import SidebarSection from "../views/components/Sidebar2.vue";
 export default {
     components: {
         HeaderSection,

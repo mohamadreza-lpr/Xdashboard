@@ -1,5 +1,5 @@
 <template>
-    <div>
-        <h1>this is about page</h1>
+    <div class="col">
+        <x-button buttonText="Hello" type="warning" size="lg" />
     </div>
 </template>

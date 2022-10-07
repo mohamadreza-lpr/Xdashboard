@@ -90,6 +90,11 @@ export default {
             },
         };
     },
+    methods: {
+        showAlert() {
+            alert("EARTH HACKED 💪💪💪💪");
+        },
+    },
 };
 </script>
 

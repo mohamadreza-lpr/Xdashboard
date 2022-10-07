@@ -1,6 +1,6 @@
 <template>
      <div class="container-fluid" id="Header">
-          <b-navbar toggleable="lg" type="dark" variant="dark">
+          <b-navbar class="rounded-lg shadow" toggleable="lg" type="dark" variant="dark">
                <b-navbar-brand href="#">Profile</b-navbar-brand>
 
                <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
@@ -36,6 +36,6 @@ export default {};
 #Header {
      box-sizing: border-box;
      padding: 0px;
-     margin: 0px;
+     margin: 10px;
 }
 </style>
