@@ -1,9 +1,15 @@
 <template>
-    <router-view></router-view>
+    <div>
+        <router-view></router-view>
+        <toastNotification/>
+    </div>
 </template>
 <script>
+import toastNotification from "./components/Xtoast.vue"
 export default {
-    components: {},
+    components: {
+        toastNotification
+    },
 };
 </script>
 <style lang="scss"></style>
